@@ -2,6 +2,14 @@
 <ui version="4.0">
  <class>MainWindow</class>
  <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>905</width>
+    <height>907</height>
+   </rect>
+  </property>
   <property name="sizePolicy">
    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
     <horstretch>0</horstretch>
@@ -42,7 +50,26 @@
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="1,0">
       <item>
-       <widget class="QListWidget" name="listWidget_files"/>
+       <widget class="QListWidget" name="listWidget_files">
+        <property name="acceptDrops">
+         <bool>true</bool>
+        </property>
+        <property name="showDropIndicator" stdset="0">
+         <bool>true</bool>
+        </property>
+        <property name="dragEnabled">
+         <bool>true</bool>
+        </property>
+        <property name="dragDropMode">
+         <enum>QAbstractItemView::DragDrop</enum>
+        </property>
+        <property name="defaultDropAction">
+         <enum>Qt::MoveAction</enum>
+        </property>
+        <property name="alternatingRowColors">
+         <bool>true</bool>
+        </property>
+       </widget>
       </item>
       <item>
        <widget class="QPushButton" name="pushButton_files">
@@ -198,7 +225,7 @@
        </sizepolicy>
       </property>
       <property name="currentIndex">
-       <number>3</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tab_extract">
        <attribute name="title">
@@ -258,7 +285,7 @@
          </widget>
         </item>
         <item row="0" column="1">
-         <widget class="QRadioButton" name="radioButton_textwithout">
+         <widget class="QCheckBox" name="checkBox_textwithout">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
             <horstretch>0</horstretch>
@@ -271,7 +298,7 @@
          </widget>
         </item>
         <item row="0" column="0">
-         <widget class="QRadioButton" name="radioButton_textwith">
+         <widget class="QCheckBox" name="checkBox_textwith">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
             <horstretch>0</horstretch>
@@ -323,6 +350,9 @@
           </property>
           <property name="text">
            <string>Stamp</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
           </property>
          </widget>
         </item>
@@ -445,7 +475,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>943</width>
+     <width>905</width>
      <height>26</height>
     </rect>
    </property>
