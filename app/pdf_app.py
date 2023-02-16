@@ -200,6 +200,7 @@ class PDF_Toolbox(Ui_MainWindow):
                                 f.write('\n')
                     f.close()
         print("---------Extract Over---------")
+        QMessageBox(QMessageBox.Information,'Information','Extract over.').exec_()
 
     def on_pushButton_merge_clicked(self):
         print("---------Merge Start---------")
@@ -227,6 +228,7 @@ class PDF_Toolbox(Ui_MainWindow):
                 merger.write(output_dir+'/merge.pdf')
             merger.close()
         print("---------Merge Over---------")
+        QMessageBox(QMessageBox.Information,'Information','Merge over.').exec_()
 
     def on_pushButton_sandm_clicked(self):
         file_path, file_type = QtWidgets.QFileDialog().getOpenFileName(filter="PDF File (*.pdf)")
@@ -281,6 +283,7 @@ class PDF_Toolbox(Ui_MainWindow):
                         writer.write(file_output_path)
                     writer.close()
         print("---------Stamp/Watermark Over---------")
+        QMessageBox(QMessageBox.Information,'Information','Add stamp/watermark over.').exec_()
 
     def on_pushButton_reduce_clicked(self):
         print("---------Reduce PDF Size Start---------")
@@ -327,6 +330,7 @@ class PDF_Toolbox(Ui_MainWindow):
                     writer.write(file_output_path)
                 writer.close()
         print("---------Reduce PDF Size Over---------")
+        QMessageBox(QMessageBox.Information,'Information','Reduce PDF file size over.').exec_()
 
     def on_radioButton_stamp_clicked(self):
         self.stamp_flag = self.radioButton_stamp.isChecked()
