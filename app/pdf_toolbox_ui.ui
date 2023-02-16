@@ -225,7 +225,7 @@
        </sizepolicy>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>3</number>
       </property>
       <widget class="QWidget" name="tab_extract">
        <attribute name="title">
@@ -408,6 +408,9 @@
        <layout class="QGridLayout" name="gridLayout_3" rowstretch="1,1" columnstretch="1,1">
         <item row="0" column="0">
          <widget class="QCheckBox" name="checkBox_rmduplication">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
           <property name="sizePolicy">
            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
             <horstretch>0</horstretch>
@@ -416,6 +419,9 @@
           </property>
           <property name="text">
            <string>Remove duplication</string>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
           </property>
           <property name="checked">
            <bool>true</bool>
@@ -460,7 +466,7 @@
            </sizepolicy>
           </property>
           <property name="text">
-           <string>Reduce</string>
+           <string>Reduce PDF Size</string>
           </property>
          </widget>
         </item>
